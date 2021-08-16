@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+.wrapper{
+    background: url("https://i.postimg.cc/SQMSVQQ2/vision.png");
+}
+.site{
+    background-color: #27292d;
+    color:#ccc;
+    box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.9);
+}
+.header-page{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000002;
+}
+.header-page__logo{
+    width: 7rem;
+}
+.aside-menu{
+    position: fixed;
+    top: 0;
+    z-index: 111;
+    width: 22rem;
+    max-width: 100%;
+    height: 100%;
+    background-color: #27292d;
+    right: 0;
+    padding: 3rem;
+    transition: all 0.5s ease;
+}
+.aside-menu__wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.aside-menu__wrapper a{
+    color: #08f;
+    padding: 1rem 0 1rem 0;
+    border-bottom: 1px solid;
+    font-weight: 800;
+}
+.aside-activate{
+    transform: translate(25rem);
+    transition: all 0.5s ease;
+}
+.aside-menu__close{
+    z-index: 1;
+    display: block;
+    text-align: center;
+    left: 46%;
+    right: auto;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.container-hamburger{
+    display: block;
+    cursor: pointer;
+    z-index: 10;
+    position: relative;
+}
+.container-hamburguer__line{
+    width: 2rem;
+    height: 0.25rem;
+    background-color: #08f;
+    margin: 00.25rem;
+    transition: all 0.3s ease;
+}
+.name-section{
+    text-align: center;
+}
+.form-login{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+.form-login input{
+    padding: 1rem;
+    font-size: 1rem;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ccc;
+}
+.product{
+    padding: 1rem;
+}
+.table-product-head{
+    padding-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+.table-product-body{
+    display: flex;
+    gap: 1rem;
+    padding-top: 1rem;
+}
+.table-product-item{
+    width: 20%;
+    text-align: center;
+}
+.button-product{
+    background-color: #08f;
+    color: white;
+    padding: 0.2rem;
+    border-radius: 0.2rem;
+}
+.register{
+    padding: 1rem;
+    text-align: center;
+    font-style: italic;
+}
+.register-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 1rem;
+}
+.register-form input{
+    padding: 1rem;
+    font-size: 1rem;
+}
+.register-form .submit{
+    background-color: #08f;
+    color: white;
+    border: none;
+    border-radius: 0.3rem;
+}
+.edit-product{
+    padding: 1rem;
+    text-align: center;
+    font-style: italic;
+}
+.content-exit{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+.content-exit__button{
+    background-color: #08f;
+    color:white;
+    padding: 1rem;
+    border-radius: 0.3rem;
+}
+.footer-page{
+    background-color: #4f5156;
+}
+@media only screen and (min-width: 1020px){
+    .wrapper{
+        /*display: flex;*/
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .site{
+        /*max-width: 69%;*/
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    .name-section{
+        margin: 0 25rem;
+    }
+}
