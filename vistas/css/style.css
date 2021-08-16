@@ -16,7 +16,7 @@ a{
 }
 .header-page{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     background-color: #000002;
 }
@@ -75,12 +75,14 @@ a{
 }
 .name-section{
     text-align: center;
+    padding-top: 2rem;
 }
 .form-login{
     display: flex;
     flex-direction: column;
     gap: 1rem;
     padding: 1rem;
+    align-items: center;
 }
 .form-login input{
     padding: 1rem;
@@ -89,22 +91,46 @@ a{
     border: 1px solid rgba(255, 255, 255, 0.2);
     color: #ccc;
 }
+.form-login .submit{
+    background-color: #08f;
+    color: white;
+    border: none;
+    border-radius: 0.3rem;
+    width: max-content;
+}
 .product{
     padding: 1rem;
+    text-align: center;
+}
+.product h2{
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 .table-product-head{
-    padding-top: 1rem;
+    padding: 0.5rem;
     display: flex;
     gap: 1rem;
 }
 .table-product-body{
     display: flex;
+    flex-direction: column;
     gap: 1rem;
-    padding-top: 1rem;
+}
+.table-product-body-item{
+    display: flex;
+    gap: 1rem;
+    padding: 0.6rem;
+    background-color: #4f5156;
 }
 .table-product-item{
     width: 20%;
     text-align: center;
+}
+.item-head{
+    background-color: darkslateblue;
+    border-radius: 5px;
+    padding: 0.5rem;
 }
 .button-product{
     background-color: #08f;
@@ -144,29 +170,25 @@ a{
     gap: 1rem;
     padding: 1rem;
     text-align: center;
+    align-items: center;
 }
 .content-exit__button{
     background-color: #08f;
     color:white;
     padding: 1rem;
     border-radius: 0.3rem;
+    width: max-content;
 }
 .footer-page{
     background-color: #4f5156;
 }
 @media only screen and (min-width: 1020px){
-    .wrapper{
-        /*display: flex;*/
-        flex-direction: column;
-        align-items: center;
-
     }
     .site{
-        /*max-width: 69%;*/
+        max-width: 80%;
         margin-top: 2rem;
         margin-bottom: 2rem;
-    }
-    .name-section{
-        margin: 0 25rem;
+        margin-left: auto;
+        margin-right: auto;
     }
 }

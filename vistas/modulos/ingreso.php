@@ -6,7 +6,7 @@
 
 	<input type="password" placeholder="Contraseña" name="claveI" required>
 
-	<input type="submit" value="Ingresar">
+	<input class="submit" type="submit" value="Ingresar">
 
 </form>
 

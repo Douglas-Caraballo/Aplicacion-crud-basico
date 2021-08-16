@@ -29,7 +29,7 @@ class PorductosC{
         $respuesta = ProductosM::MostrarProductosM($tablaBD);
 
         foreach($respuesta as $key => $value){
-            echo'<div class="table-product-body">
+            echo'<div class="table-product-body-item">
                     <article class="table-product-item">'.$value["nombre"].'</article>
                     <article class="table-product-item">$'.$value["precio"].'</article>
                     <article class="table-product-item">'.$value["existencia"].'</article>

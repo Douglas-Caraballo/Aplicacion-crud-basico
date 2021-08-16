@@ -25,7 +25,7 @@ class ProductosM extends ConexionBD{
 
 
     /**
-     *  hace la consuta a la base de datos para mostrar los productos
+     *  Funcion que hace la consuta a la base de datos para mostrar los productos
      */
 
     static public function MostrarProductosM($tablaBD){
@@ -39,7 +39,7 @@ class ProductosM extends ConexionBD{
     }
 
     /**
-     *  funcion para realizar la consulta a la base de datos que muestra los valores
+     *  Funcion para realizar la consulta a la base de datos que muestra los valores
      *  para modificar
      */
     static public function EditarProductosM($datosC, $tablaBD){
@@ -73,7 +73,7 @@ class ProductosM extends ConexionBD{
     }
 
     /**
-     *  
+     *  Funcion que ejecuta la consulta para eliminar los archivos en la base de datos
      */
 
     static public function BorrarProductosM($datosC, $tablaBD){
