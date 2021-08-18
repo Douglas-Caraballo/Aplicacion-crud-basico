@@ -95,4 +95,45 @@ class PorductosC{
         }
     }
 
+    public function ReporteC(){
+        $tablaBD="productos";
+        $respuesta = ProductosM::ReporteM($tablaBD);
+
+        ob_start();
+        $pdf = new PDF();
+        $pdf -> AliasNbPages();
+        $pdf -> AddPage();
+        $pdf -> SetFont('Arial', 'B', 12);
+
+        foreach($respuesta as $key => $row){
+            $pdf -> Cell(90,10,$row['nombre'],1,0,'C',0);
+            $pdf -> Cell(50,10,'$ '.$row['precio'],1,0,'C',0);
+            $pdf -> Cell(50,10,$row['existencia'],1,1,'C',0);
+        }
+        $pdf->Output();
+        ob_end_flush();
+
+    }
+
+}
+
+class PDF extends FPDF{
+    function Header(){
+        //Logo
+        $this -> Image('vistas/img/logo.png',10,8,33);
+        //Tipo de letra
+        $this -> SetFont('Arial', 'B', 15);
+        //Titulo
+        $this -> Cell(200,10, utf8_decode("Productos"),0,1,'C');
+        //Salto de linea
+        $this->Ln(30);
+    }
+    function Footer(){
+        //Posición a 1.5cm del final
+        $this ->SetY(-15);
+        //Tamaño de la paginacion
+        $this -> SetFont('Arial','I',8);
+        //Numero de pagina
+        $this -> Cell(0,10,utf8_decode('Páina' ).$this->PageNo().'/{nb}',0,0,'C');
+    }
 }

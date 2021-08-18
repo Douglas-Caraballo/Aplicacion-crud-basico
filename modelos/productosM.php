@@ -89,4 +89,15 @@ class ProductosM extends ConexionBD{
         $pdo ->close();
     }
 
+    /**
+     * 
+     */
+
+    static public function ReporteM($tablaBD){
+        $pdo = ConexionBD::cBD()-> prepare("SELECT nombre, precio, existencia FROM $tablaBD");
+
+        $pdo -> execute();
+        return $pdo -> fetchAll();
+        $pdo -> close();
+    }
 }

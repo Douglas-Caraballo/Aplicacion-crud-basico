@@ -1,4 +1,6 @@
 <?php
+require("libs/fpdf.php");
+
 require_once "controladores/rutasC.php";
 require_once "controladores/loginC.php";
 require_once "controladores/productosC.php";
