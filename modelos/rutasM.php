@@ -8,9 +8,9 @@ class Modelo{
 
             $pagina= "vistas/modulos/".$rutas.".php";
         }else if ($rutas=="index"){
-            $pagina = "vistas/modulos/ingreso.php";
+            $pagina = "vistas/modulos/inicio.php";
         }else{
-            $pagina= "vistas/modulos/ingreso.php";
+            $pagina= "vistas/modulos/inicio.php";
         }
 
         return $pagina;

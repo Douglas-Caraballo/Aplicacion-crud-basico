@@ -19,6 +19,9 @@ a{
     justify-content: space-around;
     align-items: center;
     background-color: #000002;
+    position: sticky;
+    height: 100%;
+    top: 0;
 }
 .header-page__logo{
     width: 7rem;
@@ -34,6 +37,7 @@ a{
     right: 0;
     padding: 3rem;
     transition: all 0.5s ease;
+    box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.9);
 }
 .aside-menu__wrapper{
     display: flex;
@@ -70,8 +74,46 @@ a{
     width: 2rem;
     height: 0.25rem;
     background-color: #08f;
-    margin: 00.25rem;
+    margin: 0.25rem;
     transition: all 0.3s ease;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+}
+.content-home-1{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+.content-home__text{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+}
+.content-home__text__list{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.picture-home-1{
+    width: 100%;
+    height: 27rem;
+}
+.home-img{
+    width: 100%;
+    height: 100%;
+}
+.content-home-2{
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+}
+.picture-home-2{
+    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.9);
 }
 .name-section{
     text-align: center;
@@ -183,7 +225,6 @@ a{
     background-color: #4f5156;
 }
 @media only screen and (min-width: 1020px){
-    }
     .site{
         max-width: 80%;
         margin-top: 2rem;
@@ -191,4 +232,8 @@ a{
         margin-left: auto;
         margin-right: auto;
     }
+    .content-home-1{
+        flex-direction: row;
+    }
+
 }
