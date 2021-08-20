@@ -103,7 +103,7 @@ class PorductosC{
         $pdf = new PDF();
         $pdf -> AliasNbPages();
         $pdf -> AddPage();
-        $pdf -> SetFont('Arial', 'B', 12);
+        $pdf -> SetFont('Arial', '', 12);
 
         foreach($respuesta as $key => $row){
             $pdf -> Cell(90,10,$row['nombre'],1,0,'C',0);
@@ -127,6 +127,12 @@ class PDF extends FPDF{
         $this -> Cell(200,10, utf8_decode("Productos"),0,1,'C');
         //Salto de linea
         $this->Ln(30);
+        //Cabecera de la tabla
+        $this -> Cell(90,10,'Nombre',1,0,'C',0);
+        $this -> Cell(50,10,'Precio',1,0,'C',0);
+        $this -> Cell(50,10,'Existencia',1,1,'C',0);
+        //Salto de linea
+        $this -> Ln(5);
     }
     function Footer(){
         //Posición a 1.5cm del final

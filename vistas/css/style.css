@@ -164,15 +164,17 @@ a{
     gap: 1rem;
     padding: 0.6rem;
     background-color: #4f5156;
+    flex-flow: wrap;
 }
 .table-product-item{
-    width: 20%;
+    width: 26%;
     text-align: center;
 }
 .item-head{
     background-color: darkslateblue;
     border-radius: 5px;
     padding: 0.5rem;
+    width: max-content;
 }
 .button-product{
     background-color: #08f;
@@ -224,6 +226,10 @@ a{
 .footer-page{
     background-color: #4f5156;
 }
+.footer-page__version{
+    text-align: center;
+    padding: 1rem;
+}
 @media only screen and (min-width: 1020px){
     .site{
         max-width: 80%;
@@ -235,5 +241,10 @@ a{
     .content-home-1{
         flex-direction: row;
     }
-
+    .table-product-body-item{
+        flex-wrap: nowrap;
+    }
+    .item-head{
+        width: 26%;
+    }
 }

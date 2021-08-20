@@ -24,14 +24,7 @@
         </section>
 
         <footer class="footer-page">
-            <div>
-                <div>
-                    page contac us
-                </div>
-                <div></div>
-                <div></div>
-            </div>
-            <div>
+            <div class="footer-page__version">
                 <p>Versión 1.0.0</p>
             </div>
         </footer>
