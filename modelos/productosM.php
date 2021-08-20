@@ -90,7 +90,7 @@ class ProductosM extends ConexionBD{
     }
 
     /**
-     * 
+     * Funcion que realiza una consulta a la tabla de la base de datos y la envia al controlador
      */
 
     static public function ReporteM($tablaBD){

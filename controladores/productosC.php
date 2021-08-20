@@ -94,7 +94,7 @@ class PorductosC{
 
         }
     }
-
+    //Funcion que genera un archivo pdf con los datos ubicados en la tabla de la base de datos
     public function ReporteC(){
         $tablaBD="productos";
         $respuesta = ProductosM::ReporteM($tablaBD);
@@ -116,7 +116,7 @@ class PorductosC{
     }
 
 }
-
+//Clase para generar el header y el footer del archivo pdf a nuestros gustos
 class PDF extends FPDF{
     function Header(){
         //Logo
