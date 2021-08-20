@@ -31,6 +31,7 @@
                 <li>Ingresar (  Dirige a la pagina para iniciar sesión)</li>
                 <li>Productos ( Dirige a la tabla con todos los productos ya registrados)</li>
                 <li>Registrar Productos ( Dirige a un formulario para registrar los productos en la base de datos )</li>
+                <li>Generar Reportes ( Muestra un archivo pdf con los productos ya registrados )</li>
                 <li>Salir ( Cierra la sesión) </li>
             </ul>
         </div>
