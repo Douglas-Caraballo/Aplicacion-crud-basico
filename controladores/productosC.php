@@ -7,7 +7,7 @@ class PorductosC{
         if (isset($_POST["nombreR"])){
 
             $datosC= array("nombre"=>$_POST["nombreR"], "precio"=> $_POST["precioR"],
-            "existencia"=>$_POST["existenciaR"]);
+            "existencia"=>$_POST["existenciaR"], "fecha"=>$_POST["fechaR"], "usuario"=>$_POST["usuarioR"]);
 
             $tablaBD="productos";
 
@@ -107,8 +107,9 @@ class PorductosC{
 
         foreach($respuesta as $key => $row){
             $pdf -> Cell(90,10,$row['nombre'],1,0,'C',0);
-            $pdf -> Cell(50,10,'$ '.$row['precio'],1,0,'C',0);
-            $pdf -> Cell(50,10,$row['existencia'],1,1,'C',0);
+            $pdf -> Cell(30,10,'$ '.$row['precio'],1,0,'C',0);
+            $pdf -> Cell(30,10,$row['existencia'],1,0,'C',0);
+            $pdf -> Cell(30,10,$row['fecha'],1,1,'C',0);
         }
         $pdf->Output();
         ob_end_flush();
@@ -129,8 +130,9 @@ class PDF extends FPDF{
         $this->Ln(30);
         //Cabecera de la tabla
         $this -> Cell(90,10,'Nombre',1,0,'C',0);
-        $this -> Cell(50,10,'Precio',1,0,'C',0);
-        $this -> Cell(50,10,'Existencia',1,1,'C',0);
+        $this -> Cell(30,10,'Precio',1,0,'C',0);
+        $this -> Cell(30,10,'Existencia',1,0,'C',0);
+        $this -> Cell(30,10,'Fecha',1,1,'C',0);
         //Salto de linea
         $this -> Ln(5);
     }
