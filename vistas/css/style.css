@@ -197,6 +197,10 @@ a{
     padding: 1rem;
     font-size: 1rem;
 }
+.register-form select{
+    padding: 1rem;
+    font-size: 1rem;
+}
 .register-form .submit{
     background-color: #08f;
     color: white;

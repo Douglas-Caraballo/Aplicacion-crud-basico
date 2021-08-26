@@ -103,10 +103,12 @@ class ProductosM extends ConexionBD{
         $pdo -> close();
     }
 
-
-    static public function ReporteUsuariosM($tablaBDprimary, $tablaBDsecund, $datosC){
-        $pdo = ConexionBD::cBD()-> prepare("SELECT * FROM usuario U INNER JOIN productos P 
-        on P.id_usuario= U.id where P.id_usuario=:id");
+    /**
+     * Funcion que realiza la consulta a la base de datos para mostrar los datos de la tabla relacionada y la relación entre esta
+     */
+    static public function ReporteUsuariosM($tablaBDprimary, $tablaBDsecond,$datosC){
+        $pdo = ConexionBD::cBD()-> prepare("SELECT * FROM $tablaBDsecond U INNER JOIN $tablaBDprimary P 
+        ON P.id_usuario= U.id WHERE P.id_usuario=:id");
 
         $pdo -> bindParam(":id",$datosC["idU"], PDO::PARAM_INT);
 

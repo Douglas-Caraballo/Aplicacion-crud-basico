@@ -115,31 +115,31 @@ class PorductosC{
         ob_end_flush();
 
     }
-
+    //Funcion que genera e
     public function ReporteUsuariosC(){
         $tablaBDprimary="productos";
-        $tablaBDsecund="usuarios";
+        $tablaBDsecond="usuario";
         if(isset($_POST["idU"])){
-        $datosC = array("idU"=>$_POST["idU"]);
+            $datosC = array("idU"=>$_POST["idU"]);
 
-        $respuesta = ProductosM::ReporteUsuariosM($tablaBDprimary, $tablaBDsecund, $datosC);
+            $respuesta = ProductosM::ReporteUsuariosM($tablaBDprimary, $tablaBDsecond, $datosC);
 
-        ob_start();
-        $pdf = new PDFU();
-        $pdf -> AliasNbPages();
-        $pdf -> AddPage();
-        $pdf -> SetFont('Arial', '', 12);
+            ob_start();
+            $pdf = new PDFU();
+            $pdf -> AliasNbPages();
+            $pdf -> AddPage();
+            $pdf -> SetFont('Arial', '', 12);
 
-        foreach($respuesta as $key => $row){
-            $pdf -> Cell(50,10,$row['nombre'],1,0,'C',0);
-            $pdf -> Cell(30,10,'$ '.$row['precio'],1,0,'C',0);
-            $pdf -> Cell(30,10,$row['existencia'],1,0,'C',0);
-            $pdf -> Cell(30,10,$row['fecha'],1,0,'C',0);
-            $pdf -> Cell(30,10,$row['usuario'],1,1,'C',0);
+            foreach($respuesta as $key => $row){
+                $pdf -> Cell(50,10,$row['nombre'],1,0,'C',0);
+                $pdf -> Cell(30,10,'$ '.$row['precio'],1,0,'C',0);
+                $pdf -> Cell(30,10,$row['existencia'],1,0,'C',0);
+                $pdf -> Cell(30,10,$row['fecha'],1,0,'C',0);
+                $pdf -> Cell(30,10,$row['usuario'],1,1,'C',0);
+            }
+            $pdf->Output();
+            ob_end_flush();
         }
-        $pdf->Output();
-        ob_end_flush();
-    }
     }
 
 }
