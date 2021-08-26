@@ -15,12 +15,12 @@ if(!$_SESSION["Ingreso"]){
 
     <div class="wrapper-reports__user">
         <h3>Reporte por usuarios</h3>
-        <form method="post">
+        <form class="wrapper-reports__user__form" method="post">
             <select name="idU">
                 <option value="1">Admin</option>
                 <option value="2">User</option>
             </select>
-            <input class="" type="submit" value="Generar">
+            <input class="wrapper-reports__user__form__submit" type="submit" value="Generar">
 
             <?php
                 $reporteU= new PorductosC();

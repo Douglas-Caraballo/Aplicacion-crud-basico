@@ -235,6 +235,31 @@ a{
     border-radius: 0.2rem;
     width: max-content;
 }
+.wrapper-reports__user{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+.wrapper-reports__user__form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+.wrapper-reports__user__form select{
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+.wrapper-reports__user__form__submit{
+    background-color: #08f;
+    color: white;
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: max-content;
+}
 .content-exit__button{
     background-color: #08f;
     color:white;
@@ -265,5 +290,14 @@ a{
     }
     .item-head{
         width: 26%;
+    }
+    .wrapper-reports{
+        flex-direction: row;
+    }
+    .wrapper-reports__product{
+        width: 50%;
+    }
+    .wrapper-reports__user{
+        width: 50%;
     }
 }
