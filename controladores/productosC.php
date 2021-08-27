@@ -115,7 +115,7 @@ class PorductosC{
         ob_end_flush();
 
     }
-    //Funcion que genera e
+    //Funcion que genera reporte por usuarios
     public function ReporteUsuariosC(){
         $tablaBDprimary="productos";
         $tablaBDsecond="usuario";
@@ -160,7 +160,7 @@ class PDF extends FPDF{
         $this -> Cell(30,10,'Existencia',1,0,'C',0);
         $this -> Cell(30,10,'Fecha',1,0,'C',0);
         //Salto de linea
-        $this -> Ln(5);
+        $this -> Ln(15);
     }
     function Footer(){
         //Posición a 1.5cm del final
@@ -172,7 +172,7 @@ class PDF extends FPDF{
     }
 }
 
-//Clase para generar el header y el footer del archivo pdf a nuestros gustos
+//Clase para generar el header y el footer del archivo pdf a nuestros gustos para reportes por usuarios
 class PDFU extends FPDF{
     function Header(){
         //Logo

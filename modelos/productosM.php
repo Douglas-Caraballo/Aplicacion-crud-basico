@@ -107,7 +107,7 @@ class ProductosM extends ConexionBD{
      * Funcion que realiza la consulta a la base de datos para mostrar los datos de la tabla relacionada y la relación entre esta
      */
     static public function ReporteUsuariosM($tablaBDprimary, $tablaBDsecond,$datosC){
-        $pdo = ConexionBD::cBD()-> prepare("SELECT * FROM $tablaBDsecond U INNER JOIN $tablaBDprimary P 
+        $pdo = ConexionBD::cBD()-> prepare("SELECT * FROM $tablaBDsecond AS U INNER JOIN $tablaBDprimary AS P 
         ON P.id_usuario= U.id WHERE P.id_usuario=:id");
 
         $pdo -> bindParam(":id",$datosC["idU"], PDO::PARAM_INT);
