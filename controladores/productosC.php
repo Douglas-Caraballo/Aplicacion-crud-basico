@@ -97,7 +97,8 @@ class PorductosC{
     //Funcion que genera un archivo pdf con los datos ubicados en la tabla de la base de datos
     public function ReporteC(){
         $tablaBD="productos";
-        $respuesta = ProductosM::ReporteM($tablaBD);
+        $tablaBDsecond="usuario";
+        $respuesta = ProductosM::ReporteM($tablaBD, $tablaBDsecond);
 
         ob_start();
         $pdf = new PDF();
@@ -109,7 +110,8 @@ class PorductosC{
             $pdf -> Cell(50,10,$row['nombre'],1,0,'C',0);
             $pdf -> Cell(30,10,'$ '.$row['precio'],1,0,'C',0);
             $pdf -> Cell(30,10,$row['existencia'],1,0,'C',0);
-            $pdf -> Cell(30,10,$row['fecha'],1,1,'C',0);
+            $pdf -> Cell(30,10,$row['fecha'],1,0,'C',0);
+            $pdf -> Cell(30,10,$row['usuario'],1,1,'C',0);
         }
         $pdf->Output();
         ob_end_flush();
@@ -159,6 +161,7 @@ class PDF extends FPDF{
         $this -> Cell(30,10,'Precio',1,0,'C',0);
         $this -> Cell(30,10,'Existencia',1,0,'C',0);
         $this -> Cell(30,10,'Fecha',1,0,'C',0);
+        $this -> Cell(30,10,'Usuario',1,0,'C',0);
         //Salto de linea
         $this -> Ln(15);
     }

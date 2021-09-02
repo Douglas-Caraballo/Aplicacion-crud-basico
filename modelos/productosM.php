@@ -95,8 +95,9 @@ class ProductosM extends ConexionBD{
      * Funcion que realiza una consulta a la tabla de la base de datos y la envia al controlador
      */
 
-    static public function ReporteM($tablaBD){
-        $pdo = ConexionBD::cBD()-> prepare("SELECT nombre, precio, existencia, fecha FROM $tablaBD");
+    static public function ReporteM($tablaBD, $tablaBDsecond){
+        $pdo = ConexionBD::cBD()-> prepare("SELECT P.nombre, P.precio, P.existencia, P.fecha, U.usuario FROM $tablaBD AS P INNER JOIN 
+        $tablaBDsecond AS U WHERE P.id_usuario = U.id");
 
         $pdo -> execute();
         return $pdo -> fetchAll();
