@@ -1,10 +1,6 @@
 <?php
     session_start();
-
-    if(!$_SESSION["Ingreso"]){
-        header("location:index.php?ruta=ingreso");
-        exit();
-    }
+    if(isset($_SESSION["super"]) || isset($_SESSION["admin"]) || isset($_SESSION["user"])){
 ?>
 
 <div class="register">
@@ -34,3 +30,8 @@
         $registrar -> RegistrarProductoC();
     ?>
 </div>
+<?php
+    }else{
+        header("location:index.php?ruta=ingreso");
+        exit();
+    }

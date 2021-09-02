@@ -16,10 +16,21 @@ class LoginC{
             $respuesta = LoginM:: IngresoM($datosc, $tablaBD);
 
             if($respuesta["usuario"]==$_POST["usuarioI"] && $respuesta["clave"]==$_POST["claveI"]){
-                session_start();
+                if($respuesta["id_permiso"]=="1"){
+                    session_start();
+                    $_SESSION["super"]=true;
+                    header("location:index.php?ruta=productos");
+                    echo "hola";
+                }else if ($respuesta["id_permiso"]=="2"){
+                    session_start();
+                    $_SESSION["admin"]=true;
+                    header("location:index.php?ruta=productos");
+                }else{
+                    session_start();
+                    $_SESSION["user"]=true;
+                    header("location:index.php?ruta=productos");
+                }
 
-                $_SESSION["Ingreso"]=true;
-                header("location:index.php?ruta=productos");
             }else{
                 echo "ERROR AL INGRESAR";
             }

@@ -10,7 +10,7 @@ class LoginM extends ConexionBD{
 
     static public function IngresoM($datosc, $tablaBD){
 
-        $pdo = ConexionBD::cBD()-> prepare("SELECT usuario, clave FROM $tablaBD WHERE usuario =:usuario");
+        $pdo = ConexionBD::cBD()-> prepare("SELECT usuario, clave, id_permiso  FROM $tablaBD WHERE usuario =:usuario");
         $pdo -> bindParam(":usuario", $datosc["usuario"], PDO::PARAM_STR);
 
         $pdo -> execute();

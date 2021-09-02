@@ -1,10 +1,6 @@
 <?php
 session_start();
-
-if(!$_SESSION["Ingreso"]){
-    header("location:index.php?ruta=ingreso");
-    exit();
-}
+if(isset($_SESSION["super"]) || isset($_SESSION["admin"])){
 ?>
 
 <div class="wrapper-reports">
@@ -29,3 +25,11 @@ if(!$_SESSION["Ingreso"]){
         </form>
     </div>
 </div>
+<?php
+    }else if(isset($_SESSION["user"])){
+        header("location:index.php?ruta=productos");
+    }else{
+        header("location:index.php?ruta=ingreso");
+        exit();
+    }
+?>
