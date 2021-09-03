@@ -5,6 +5,7 @@
         <a href="index.php?ruta=ingreso">Ingresar</a>
         <a href="index.php?ruta=productos">Productos</a>
         <a href="index.php?ruta=registrar">Registrar Productos</a>
+        <a href="index.php?ruta=usuario">Registrar Usuarios</a>
         <a href="index.php?ruta=reporte">Generar Reportes</a>
         <a href="index.php?ruta=salir">Salir</a>
     </div>

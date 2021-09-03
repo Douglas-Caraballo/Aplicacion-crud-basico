@@ -25,7 +25,7 @@
 
         <footer class="footer-page">
             <div class="footer-page__version">
-                <p>Versión 1.0.0</p>
+                <p>Versión 1.8.0</p>
             </div>
         </footer>
     </div>
