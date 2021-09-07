@@ -7,7 +7,7 @@ class PorductosC{
         if (isset($_POST["nombreR"])){
 
             $datosC= array("nombre"=>$_POST["nombreR"], "precio"=> $_POST["precioR"],
-            "existencia"=>$_POST["existenciaR"], "fecha"=>$_POST["fechaR"], "usuario"=>$_POST["usuarioR"]);
+            "existencia"=>$_POST["existenciaR"], "fecha"=>$_POST["fechaR"], "usuario"=>$_SESSION["user_id"]);
 
             $tablaBD="productos";
 

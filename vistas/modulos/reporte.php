@@ -15,6 +15,8 @@ if(isset($_SESSION["super"]) || isset($_SESSION["admin"])){
             <select name="idU">
                 <option value="1">Admin</option>
                 <option value="2">User</option>
+                <option value="3">pjuan</option>
+                <option value="4">mdelbarrio</option>
             </select>
             <input class="wrapper-reports__user__form__submit" type="submit" value="Generar">
 

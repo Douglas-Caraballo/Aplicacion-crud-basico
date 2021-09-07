@@ -1,6 +1,7 @@
 <?php
     session_start();
     if(isset($_SESSION["super"]) || isset($_SESSION["admin"]) || isset($_SESSION["user"])){
+        $_SESSION["user_id"];
 ?>
 
 <div class="register">
@@ -15,12 +16,6 @@
 		<input type="text" placeholder="Existencia" name="existenciaR" required>
 
         <input type="date" placeholder="Fecha" name="fechaR" required>
-
-        <select name="usuarioR" required>
-                <option value="">Usuarios</option>
-                <option value="1">Admin</option>
-                <option value="2">User</option>
-        </select>
 
 		<input class="submit" type="submit" value="Registrar">
     </form>

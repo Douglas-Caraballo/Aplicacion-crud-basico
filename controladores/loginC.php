@@ -19,15 +19,17 @@ class LoginC{
                 if($respuesta["id_permiso"]=="1"){
                     session_start();
                     $_SESSION["super"]=true;
+                    $_SESSION["user_id"]=$respuesta["id"];
                     header("location:index.php?ruta=productos");
-                    echo "hola";
                 }else if ($respuesta["id_permiso"]=="2"){
                     session_start();
                     $_SESSION["admin"]=true;
+                    $_SESSION["user_id"]=$respuesta["id"];
                     header("location:index.php?ruta=productos");
                 }else{
                     session_start();
                     $_SESSION["user"]=true;
+                    $_SESSION["user_id"]=$respuesta["id"];
                     header("location:index.php?ruta=productos");
                 }
 
