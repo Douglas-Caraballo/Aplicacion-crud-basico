@@ -5,15 +5,20 @@
 
 <div class="edit-product">
     <h2>Editar Producto</h2>
-    <form class="register-form" method="post">
-        <?php
-            $editar = new PorductosC();
-            $editar -> EditarProductosC();
+    <div class="register__content">
+        <form class="register-form" method="post">
+            <?php
+                $editar = new PorductosC();
+                $editar -> EditarProductosC();
 
-            $actualizar = new PorductosC();
-            $actualizar -> ActualizarProductosC();
-        ?>
-    </form>
+                $actualizar = new PorductosC();
+                $actualizar -> ActualizarProductosC();
+            ?>
+        </form>
+        <figure class="register__figure">
+            <img class="register__figure__img" src="vistas/img/uploading.svg" alt="">
+        </figure>
+    </div>
 </div>
 
 <?php

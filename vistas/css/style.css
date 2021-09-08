@@ -207,6 +207,13 @@ a{
     border: none;
     border-radius: 0.3rem;
 }
+.register__figure{
+    width: 100%;
+    padding-top: 1rem;
+}
+.register__figure__img{
+    width: 100%;
+}
 .edit-product{
     padding: 1rem;
     text-align: center;
@@ -294,6 +301,18 @@ a{
     }
     .item-head{
         width: 26%;
+    }
+    .register__content{
+        display: flex;
+        gap: 1rem;
+        padding-top: 2rem;
+    }
+    .register-form{
+        width: 50%;
+    }
+    .register__figure{
+        width: 50%;
+        padding-top: 0;
     }
     .wrapper-reports{
         flex-direction: row;

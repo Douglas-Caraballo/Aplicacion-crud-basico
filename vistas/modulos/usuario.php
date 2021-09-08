@@ -5,6 +5,7 @@
 ?>
 <div class="register">
     <h2>Registro de Usuarios</h2>
+    <div class="register__content">
         <form class="register-form" method="post">
             <label>Usuario</label>
             <input type="text" name="usuarioTR" required>
@@ -24,6 +25,10 @@
                 $registroU -> RegistrarUsuarioC();
             ?>
         </form>
+        <figure class="register__figure">
+            <img class="register__figure__img" src="vistas/img/register.svg" alt="">
+        </figure>
+    </div>
 </div>
 
 <?php
