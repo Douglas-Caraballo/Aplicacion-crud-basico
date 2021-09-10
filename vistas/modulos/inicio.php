@@ -39,4 +39,41 @@
             <img class="home-img" src="vistas/img/menu-1.png" alt="">
         </figure>
     </div>
+    <div class="content-home-primary">
+        <figure class="picture-home-primary">
+            <img class="home-img" src="vistas/img/list.svg" alt="">
+        </figure>
+        <div class="content-home__text">
+            <p>La aplicación cuaneta con difierentes 3 tipos de usuarios y sus
+                permisos unicos para cada uno
+            </p>
+            <ul class="content-home__text__list">
+                <li>Super Admin:
+                    <ul class="content-home__text__list">
+                        <li>Registrar Usuarios</li>
+                        <li>Registrar Productos</li>
+                        <li>Editar Productos</li>
+                        <li>Eliminar Productos</li>
+                        <li>Ver los productos</li>
+                        <li>Generar Reportes</li>
+                    </ul>
+                </li>
+                <li>Admin:
+                    <ul class="content-home__text__list">
+                        <li>Registrar Productos</li>
+                        <li>Editar Productos</li>
+                        <li>Eliminar Productos</li>
+                        <li>Ver los productos</li>
+                        <li>Generar Reportes</li>
+                    </ul>
+                </li>
+                <li>User
+                    <ul class="content-home__text__list">
+                        <li>Registrar Productos</li>
+                        <li>Ver los productos</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
 </div>
