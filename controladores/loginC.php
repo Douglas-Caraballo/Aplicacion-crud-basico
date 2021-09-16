@@ -14,25 +14,25 @@ class LoginC{
             $tablaBD = "usuario";
 
             $respuesta = LoginM:: IngresoM($datosc, $tablaBD);
-
-            if($respuesta["usuario"]==$_POST["usuarioI"] && $respuesta["clave"]==$_POST["claveI"]){
-                session_start();
-                if($respuesta["id_permiso"]=="1"){
-                    $_SESSION["super"]=true;
-                    $_SESSION["user_id"]=$respuesta["id"];
-                    header("location:index.php?ruta=productos");
-                }else if ($respuesta["id_permiso"]=="2"){
-                    $_SESSION["admin"]=true;
-                    $_SESSION["user_id"]=$respuesta["id"];
-                    header("location:index.php?ruta=productos");
-                }else{
-                    $_SESSION["user"]=true;
-                    $_SESSION["user_id"]=$respuesta["id"];
-                    header("location:index.php?ruta=productos");
-                }
-
+            if (empty($respuesta)){
+                echo "Usuario o contraseña erroneos";
+            }else if($respuesta["usuario"]==$_POST["usuarioI"] && $respuesta["clave"]==$_POST["claveI"]){
+                    session_start();
+                    if($respuesta["id_permiso"]=="1"){
+                        $_SESSION["super"]=true;
+                        $_SESSION["user_id"]=$respuesta["id"];
+                        header("location:index.php?ruta=productos");
+                    }else if ($respuesta["id_permiso"]=="2"){
+                        $_SESSION["admin"]=true;
+                        $_SESSION["user_id"]=$respuesta["id"];
+                        header("location:index.php?ruta=productos");
+                    }else{
+                        $_SESSION["user"]=true;
+                        $_SESSION["user_id"]=$respuesta["id"];
+                        header("location:index.php?ruta=productos");
+                    }
             }else{
-                echo "ERROR AL INGRESAR";
+                echo "Usuario o contraseña erroneos";
             }
         }
     }
