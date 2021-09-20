@@ -17,7 +17,7 @@ class LoginC{
             if (empty($respuesta)){
                 echo "Usuario o contraseña erroneos";
             }else if($respuesta["usuario"]==$_POST["usuarioI"] && $respuesta["clave"]==$_POST["claveI"]){
-                    session_start();
+                session_start();
                     $_SESSION["user_id"]=$respuesta["id"];
                     if($respuesta["id_permiso"]=="1"){
                         $_SESSION["super"]=true;

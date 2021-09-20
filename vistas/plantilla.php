@@ -8,7 +8,7 @@
     <title>Productos</title>
 </head>
 <body class="wrapper">
-    <div Class="site">
+    <div class="site">
         <header class="header-page">
             <a href="index.php">
                 <img class="header-page__logo" src="vistas/img/logo.png" alt="">
@@ -30,5 +30,18 @@
         </footer>
     </div>
     <script src="vistas/js/main.js"></script>
+    <?php
+    if(isset($_SESSION["user"])){
+        ?>
+    <script>
+        const sesionUser = '<?php echo $_SESSION["user"] ?>';
+        if (sesionUser){
+        const buttonProduct = [...document.querySelectorAll('.button-product')]
+        buttonProduct.map(buttonProduct=>{
+            buttonProduct.classList.add('button-off');
+        });
+        }
+    </script>
+    <?php } ?>
 </body>
 </html>
