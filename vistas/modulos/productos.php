@@ -1,6 +1,6 @@
 <?php
     ob_start();
-    session_start();
+    //session_start();
     if(empty($_SESSION["super"]) && empty($_SESSION["admin"]) && empty($_SESSION["user"])){
         header("location:index.php?ruta=ingreso");
         exit();

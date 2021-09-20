@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    //session_start();
     if(isset($_SESSION["super"]) || isset($_SESSION["admin"]) || isset($_SESSION["user"])){
         $_SESSION["user_id"];
 ?>
