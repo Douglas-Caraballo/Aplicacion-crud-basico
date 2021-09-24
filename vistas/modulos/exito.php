@@ -3,7 +3,7 @@
     if(isset($_SESSION["super"])){
 ?>
     <div class="content-exit">
-        <h2>El usuario fue registrado con éxito</h2>
+        <h2>Registro exitoso</h2>
         <p>Desea volver?</p>
         <a class="content-exit__button" href="index.php?ruta=productos">Productos</a>
     </div>

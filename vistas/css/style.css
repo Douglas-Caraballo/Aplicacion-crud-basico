@@ -183,8 +183,9 @@ a{
     border-radius: 0.2rem;
 }
 .button-off{
-    background-color:#99cfff ;
+    background-color:#777 ;
     cursor: not-allowed;
+    color: #222;
 }
 .register{
     padding: 1rem;

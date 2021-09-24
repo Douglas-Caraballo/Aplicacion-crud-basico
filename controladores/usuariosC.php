@@ -19,4 +19,49 @@ class UsuariosC{
         }
     }
 
+    public function RegistrarImagenC(){
+        if (isset($_POST["usuarioIR"]) && $_POST["usuarioIR"] > 0){
+            $datosc = array("usuario"=>$_POST["usuarioIR"]);
+            echo "  fsdfsdfdsffs";
+            print_r($_FILES["imagenIR"]);
+
+            if($_FILES["imagenIR"]["error"]>0){
+                echo "Error al cargar la imagen";
+            }else{
+                $permitido= array("image/png", "image/jpg", "image/jpeg");
+                if(in_array($_FILES["imagenIR"]["type"],$permitido)){
+
+                    $rutaimg= './files/'. $_POST["usuarioIR"].'/';
+                    $archivo = $rutaimg.$_FILES["imagenIR"]["name"];
+
+                    if(!file_exists($rutaimg)){
+                        mkdir($rutaimg);
+                    }
+                    if(!file_exists($archivo)){
+                        $resultado = @move_uploaded_file($_FILES["imagenIR"]["tmp_name"], $archivo);
+                        if($resultado){
+                            echo "Foto guardada";
+                        }else{
+                            echo "ERROOOR!!! NO SE PUDO GUARDAR";
+                        }
+                    }else{
+                        echo "Archivo ya existe";
+                    }
+
+                }else{
+                    echo "Archivo no permitido";
+                }
+            }
+            $tablaBD = "Imagenes";
+
+            $respuesta = UsuariosM::RegistrarImagenM($datosc, $tablaBD, $archivo);
+
+            if($respuesta == "Bien"){
+                header("location:index.php?ruta=exito");
+            }else{
+                echo "Error al guardar en la base de datos";
+            }
+        }
+    }
+
 }
