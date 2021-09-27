@@ -26,7 +26,7 @@ if(empty($_SESSION["super"]) && empty($_SESSION["admin"]) && empty($_SESSION["us
             <input type="file" name="imagenIR">
             <input class="submit" type="submit" value="Cargar">
             <?php
-                $registroI = new UsuariosC;
+                $registroI = new UsuariosC();
                 $registroI -> RegistrarImagenC();
             ?>
         </form>

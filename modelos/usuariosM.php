@@ -32,4 +32,15 @@ class UsuariosM extends ConexionBD{
         }
         $pdo -> close();
     }
+
+    static public function BuscarUsuariosM($datosc, $tablaBDprimary, $tablaBDsecond){
+        $pdo = ConexionBD::cBD() -> prepare("SELECT U.usuario, I.ruta FROM $tablaBDprimary AS U LEFT JOIN
+        $tablaBDsecond AS I ON U.id = I.id_usuario WHERE U.usuario = :usuario");
+
+        $pdo -> bindParam(":usuario", $datosc["usuario"], PDO::PARAM_STR);
+
+        $pdo -> execute();
+        return $pdo -> fetchAll();
+        $pdo -> close();
+    }
 }

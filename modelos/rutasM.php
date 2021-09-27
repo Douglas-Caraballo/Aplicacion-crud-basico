@@ -5,7 +5,7 @@ class Modelo{
     static public function RutasModelo($rutas){
         if ($rutas=="ingreso" || $rutas=="registrar" || $rutas == "productos" || $rutas == "salir"
         || $rutas == "editar" || $rutas=="reporte" || $rutas=="reporte-producto" || $rutas== "usuario"
-        || $rutas == "exito" || $rutas=="usuario-img" ){
+        || $rutas == "exito" || $rutas=="usuario-img" || $rutas=="lista-usuarios" ){
 
             $pagina= "vistas/modulos/".$rutas.".php";
         }else if ($rutas=="index"){

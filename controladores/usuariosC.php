@@ -64,4 +64,23 @@ class UsuariosC{
         }
     }
 
+    public function BuscarUsuariosC(){
+        if(isset($_POST["UsuarioB"])){
+            $datosc = array("usuario"=>$_POST["UsuarioB"]);
+            $tablaBDprimary = "usuario";
+            $tablaBDsecond = "Imagenes";
+
+            $respuesta = UsuariosM::BuscarUsuariosM($datosc, $tablaBDprimary, $tablaBDsecond);
+
+            foreach($respuesta as $key =>$value){
+                echo '<div class="user-search">
+                        <figure class="user-search__figure">
+                            <img class="user-search__figure__img" src="'.$value["ruta"].'">
+                        </figure>
+                        <p class="user-search__name">'.$value["usuario"].'</p>
+                    </div>';
+            }
+        }
+    }
+
 }

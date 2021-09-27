@@ -25,6 +25,7 @@ if(empty($_SESSION["super"]) && empty($_SESSION["admin"]) && empty($_SESSION["us
         <a href="index.php?ruta=registrar">Registrar Productos</a>
         <a href="index.php?ruta=usuario-img">Asignar Foto de Usuario</a>
         <a href="index.php?ruta=usuario">Registrar Usuarios</a>
+        <a href="index.php?ruta=lista-usuarios">Usuarios</a>
         <a href="index.php?ruta=reporte">Generar Reportes</a>
         <a href="index.php?ruta=salir">Salir</a>
     </div>
