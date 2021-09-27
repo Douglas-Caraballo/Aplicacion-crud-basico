@@ -37,6 +37,7 @@ if(empty($_SESSION["super"]) && empty($_SESSION["admin"]) && empty($_SESSION["us
     <samp class="aside-menu__close" id="close">&times</samp>
     <div class="aside-menu__wrapper">
         <a href="index.php">Inicio</a>
+        <a href="index.php?ruta=lista-usuarios">Usuarios</a>
         <a href="index.php?ruta=productos">Productos</a>
         <a href="index.php?ruta=registrar">Registrar Productos</a>
         <a href="index.php?ruta=reporte">Generar Reportes</a>
@@ -50,6 +51,7 @@ if(empty($_SESSION["super"]) && empty($_SESSION["admin"]) && empty($_SESSION["us
     <samp class="aside-menu__close" id="close">&times</samp>
     <div class="aside-menu__wrapper">
         <a href="index.php">Inicio</a>
+        <a href="index.php?ruta=lista-usuarios">Usuarios</a>
         <a href="index.php?ruta=productos">Productos</a>
         <a href="index.php?ruta=registrar">Registrar Productos</a>
         <a href="index.php?ruta=salir">Salir</a>
